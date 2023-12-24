@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KaStride</title>
+  <style>
+    body {
+      background-color: #191820;
+    }
+
+    #count {
+      display: block;
+      background-color: #191820;
+      text-align: center;
+      text-transform: capitalize;
+      letter-spacing: 3px;
+      font-size: 30px;
+      visibility: hidden;
+    }
+
+    p {
+      color: #0fd1bb;
+      padding-top: 400px;
+      text-align: center;
+      text-transform: capitalize;
+      letter-spacing: 3px;
+      font-size: 50px;
+    }
+
+    .circle {
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    #circle1 {
+      background-Color: #0fd1bb
+    }
+  </style>
+</head>
+
+<body>
+  <div id="circle1" class="circle" onclick="toggleLightAndMove(1)"></div>
+  <div id="circle2" class="circle"></div>
+  <div id="circle3" class="circle"></div>
+  <div id="circle4" class="circle"></div>
+  <span id="count">count = <span id="newCount"></span>
+  </span>
+  <p>coming soon</p>
+  <script>
+    let circlePositions = [
+      { x: 0, y: 0 },
+      { x: 0, y: 0 },
+      { x: 0, y: 0 },
+      { x: 0, y: 0 },
+    ];
+
+    let count = 0;
+    function toggleLightAndMove(index) {
+      if (index === 1) {
+        moveCircles();
+      }
+      count = (count + 1)
+      let Count = document.getElementById('count')
+      Count.style.color = 'white'
+      Count.style.visibility = 'visible'
+      let newCount = document.getElementById('newCount')
+      newCount.innerHTML = count
+    }
+
+    function moveCircles() {
+      for (let i = 0; i < circlePositions.length; i++) {
+        let circle = document.getElementById(`circle${i + 1}`);
+        moveCircleToRandomPosition(circle, i);
+      }
+    }
+
+    function moveCircleToRandomPosition(circle, index) {
+      let maxX = window.innerWidth - circle.offsetWidth;
+      let maxY = window.innerHeight - circle.offsetHeight;
+
+      circlePositions[index].x = Math.floor(Math.random() * maxX);
+      circlePositions[index].y = Math.floor(Math.random() * maxY);
+
+      circle.style.left = `${circlePositions[index].x}px`;
+      circle.style.top = `${circlePositions[index].y}px`;
+    }
+
+    // Initial setup
+    moveCircles();
+    setInterval(() => {
+      moveCircles()
+    }, 3000);
+  </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V574ZPG9DF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V574ZPG9DF');
+</script>
+</body>
+
+</html>
