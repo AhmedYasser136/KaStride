@@ -36,6 +36,7 @@ h1 {
 .topnav h1 {
   display: inline;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 select {

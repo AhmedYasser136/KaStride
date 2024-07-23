@@ -11,9 +11,10 @@
 
 <body>
   <div class="topnav">
-    <img src="Logo.webp" alt />
-    <h1>KaStride</h1>
+    <img id="logo" src="Logo.webp" alt="Logo" />
+    <h1 id="title">KaStride</h1>
   </div>
+  <input type="text" id="nameInput" style="display:none" />
 
   <div class="content" id="content">
     <div class="card" id="Logo">
@@ -70,10 +71,8 @@
       <div class="content">
         <select onchange="onlyshow(this.value)" class="control-label">
           <option value="Color">Color</option>
-          <!-- <option value="Player">Player</option> -->
           <option value="counter">Counter</option>
           <option value="run">Run</option>
-          <!-- <option value="update">Update</option> -->
         </select>
       </div>
     </div>
@@ -82,30 +81,22 @@
       <h3>Color</h3>
 
       <p class="attention">please Select Color</p>
-      <select id="lightSelector" onchange="changeLight()" class="color-label">
+      <select id="lightSelector" class="color-label">
         <option hidden>select</option>
-        <option value="1">Blue</option>
-        <option value="2">Blue &amp; Green</option>
-        <option value="3">Blue &amp; Green &amp; Red</option>
+        <option>Blue</option>
+        <option>Blue &amp; Green</option>
+        <option>Blue &amp; Green &amp; Red</option>
       </select>
     </div>
 
-    <div class="card" id="Player">
-      <h3>Player</h3>
-      <p class="attention">please Select Player</p>
-      <select id="PlayerSelector" onchange="changePlayer()" class="color-label">
-        <option hidden>select</option>
-        <option value="1" selected>1</option>
-        <option value="2">2</option>
-      </select>
-    </div>
+
 
     <div class="card" id="counter">
       <h3>Counter</h3>
-      <p class="state"><span id="count">%0%</span></p>
+      <p class="state"><span id="count">0</span></p>
       <p class="count-increase" id="timer">00:00:00</p>
-      <button class="Reset" onclick="resetTimer()">Reset Timer</button>
-      <button class="Reset" onclick="resetCount()">Reset Counter</button>
+      <button class="Reset" >Reset Timer</button>
+      <button class="Reset" >Reset Counter</button>
     </div>
 
     <div class="card" id="run">
@@ -122,13 +113,7 @@
       <p class="result">Speed: <span id="speed">0</span> m/sec</p>
     </div>
 
-    <div class="card" id="update">
-      <h3>Update</h3>
-      <p class="attention">
-        please be <span style="color: rgb(205, 9, 9)">careful</span>
-      </p>
-      <iframe id="updateFrame" src="" style="border: none; width: 90%; height: 400px"></iframe>
-    </div>
+    
   </div>
   <script src="index.js"></script>
 </body>
