@@ -242,3 +242,10 @@ option {
   color: #d43030d9;
   font-size: 1.2em
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 360px) {
+  #historyTable {
+    font-size: .65em;
+  }
+}
