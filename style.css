@@ -246,7 +246,7 @@ option {
 /* Media Query for smaller screens */
 @media (max-width: 360px) {
   #historyTable {
-    font-size: .65em;
+    font-size: .6em;
   }
 }
 
