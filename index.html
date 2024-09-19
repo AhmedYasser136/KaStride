@@ -100,8 +100,12 @@
       <h3>Counter</h3>
       <p class="state"><span id="counter">-</span></p>
       <p class="count-increase" id="timer">00:00:00</p>
-      <button class="Reset" id="pauseResumeButton" onclick="pauseResumeTimer()">Pause</button>
-      <button class="Reset" id="resetButton" onclick="resetCounter()">Reset Counter</button>
+      <button class="Reset" id="pauseResumeButton" onclick="pauseResumeTimer()">
+        Pause
+      </button>
+      <button class="Reset" id="resetButton" onclick="resetCounter()">
+        Reset Counter
+      </button>
 
       <!-- History section -->
       <div id="historyDiv">
@@ -109,17 +113,39 @@
         <table id="historyTable">
           <thead>
             <tr>
-              <th>Actions</th>
-              <th onclick="sortTable(1)">Counter</th>
-              <th onclick="sortTable(2)">Time</th>
+              <th>Remove</th>
+              <th onclick="sortTable(1)">
+                <div class="center-content">
+                  Counter
+                  <svg width="13" height="13" viewBox="0 0 13 18" fill="none">
+                    <path d="M8 0L2 6V7H14V6L8 0Z" opacity="1" fill="#143642" />
+                    <path d="M8 16L2 10V9H14V10L8 16Z" opacity="1" fill="#143642" />
+                  </svg>
+                </div>
+              </th>
+              
+
+
+              <th onclick="sortTable(2)">
+                <div class="center-content">
+                  Time
+                  <svg width="13" height="13" viewBox="0 0 13 18" fill="none">
+                    <path d="M8 0L2 6V7H14V6L8 0Z" opacity="1" fill="#143642" />
+                    <path d="M8 16L2 10V9H14V10L8 16Z" opacity="1" fill="#143642" />
+                  </svg>
+                </div>
+              </th>
+
+
+
             </tr>
           </thead>
           <tbody>
+            <!-- Rows will be added here dynamically -->
           </tbody>
         </table>
       </div>
     </div>
-
 
     <div class="card" id="run">
       <h3>Run</h3>
