@@ -249,3 +249,13 @@ option {
     font-size: .65em;
   }
 }
+
+.center-content {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+}
+
+.center-content svg {
+  margin-right: 5px; /* Optional: Add some space between the icon and the text */
+}
