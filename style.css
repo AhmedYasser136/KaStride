@@ -166,6 +166,7 @@ option {
   border-color: rgb(20, 54, 66, 0.5);
   padding: 8px;
   margin: 5px;
+  width: 120px;
 }
 
 .Reset {
@@ -246,16 +247,19 @@ option {
 /* Media Query for smaller screens */
 @media (max-width: 360px) {
   #historyTable {
-    font-size: .6em;
+    font-size: .59em;
   }
 }
 
 .center-content {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
 }
 
 .center-content svg {
-  margin-right: 5px; /* Optional: Add some space between the icon and the text */
+  margin-right: 5px;
+  /* Optional: Add some space between the icon and the text */
 }
