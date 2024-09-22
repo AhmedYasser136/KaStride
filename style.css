@@ -177,8 +177,7 @@ option {
   color: #d43030d9;
 }
 
-.color-label,
-.control-label {
+.color-label {
   display: inline-block;
   margin-bottom: 10px;
   padding: 10px;
@@ -187,10 +186,10 @@ option {
   width: 80%;
 }
 
-.control-label {
-  width: 100%;
+#control{
+  padding-top:10px;
+  padding-bottom:10px;
 }
-
 .card#run,
 #counterDiv,
 #Color,
