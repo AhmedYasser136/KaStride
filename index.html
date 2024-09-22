@@ -64,19 +64,17 @@
         Connection status
         <span id="connectionStatus">waiting</span> Connected Devices
         <span id="devices">-</span>
+        <div id="control">
+            <button onclick="onlyshow('Connect')" class="buttom">Connect</button>
+            <button onclick="onlyshow('Color')" class="buttom">Color</button>
+            <button onclick="onlyshow('counterDiv')" class="buttom">Counter</button>
+            <button onclick="onlyshow('run')" class="buttom">Run</button>
+        </div>
       </div>
     </div>
 
-    <div id="control">
-      <div class="content">
-        <select onchange="onlyshow(this.value)" class="control-label">
-          <option value="Connect">Connect</option>
-          <option value="Color">Color</option>
-          <option value="counterDiv">Counter</option>
-          <option value="run">Run</option>
-        </select>
-      </div>
-    </div>
+
+
 
     <div class="card" id="Color">
       <h3>Color</h3>
@@ -123,7 +121,7 @@
                   </svg>
                 </div>
               </th>
-              
+
 
 
               <th onclick="sortTable(2)">
@@ -156,7 +154,7 @@
       <input type="number" id="time" placeholder="Enter time" min="1" oninput="calculateSpeed()" />
       <br />
       <br />
-      <button onclick="toggleTimer();" class="buttom">Start Timer</button>
+      <button onclick="toggleTimer();" class="buttom">Timer</button>
       <br />
       <p class="result">Speed: <span id="speed">0</span> m/sec</p>
     </div>
