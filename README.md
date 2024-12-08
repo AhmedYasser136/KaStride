@@ -4,4 +4,4 @@
 
 KaStride is an advanced Training kit that enhances reflexes and agility in sports, fitness, and therapy, through an interactive app and luminous pods.
 
-![Logo](https://github.com/user-attachments/assets/0a956e8e-081e-4dcd-b275-cd78cd379847)
+![KaStride](https://github.com/user-attachments/assets/fff11686-cdd0-4626-8751-f4b9233e05d8)
