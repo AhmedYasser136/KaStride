@@ -81,7 +81,7 @@ label {
 }
 
 #connectionStatus,
-#devices,
+#devicesValue,
 .state,
 #speed,
 #time,
@@ -93,7 +93,7 @@ h4 {
 }
 
 #connectionStatus,
-#devices {
+#devicesValue {
   display: block;
 }
 
