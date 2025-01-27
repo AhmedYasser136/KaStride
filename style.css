@@ -169,6 +169,13 @@ option {
   width: 120px;
 }
 
+.buttom:hover {
+  cursor: pointer;
+}
+#control .buttom.active {
+  background-color: #143642 ;
+  color: white ;
+}
 .Reset {
   border-radius: 8px;
   border-color: rgba(20, 54, 66, 0.8);
