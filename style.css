@@ -88,7 +88,7 @@ label {
 #distance,
 h3,
 select,
-h4 {
+h4 ,#distanceLabel{
   color: #143642;
 }
 
@@ -106,7 +106,7 @@ h4 {
   font-size: 1.5rem;
 }
 
-#timer {
+#timer,#distanceLabel {
   font-size: 1rem;
 }
 
@@ -141,7 +141,7 @@ h3,
 #distance,
 .titlee,
 select,
-#historyDiv {
+#historyDiv ,#distanceLabel{
   font-weight: lighter;
   font-family: "ethnocentricregular";
 }
@@ -184,7 +184,7 @@ option {
   color: #d43030d9;
 }
 
-.color-label {
+.color-label ,.distance-label{
   display: inline-block;
   margin-bottom: 10px;
   padding: 10px;
@@ -199,7 +199,7 @@ option {
 }
 .card#run,
 #counterDiv,
-#Color,
+#Setting,
 #Connected,
 #control,
 #update,
