@@ -111,52 +111,39 @@
       </div>
     </div>
 
+    <div class="card" id="Setting">
+      <h3>Color</h3>
+      <p class="attention">Number of Color</p>
+      <select id="colorDropdown" class="color-label" aria-label="Select a color">
+        <option hidden>select</option>
+        <option value="1">1</option>
+        <option value="2">1 &amp; 2</option>
+        <option value="3">1 &amp; 2 &amp; 3</option>
+      </select>
+
+      <h3>Distance</h3>
+      <p class="attention">Distance for sensor</p>
+      <select id="distanceRange" class="distance-label" aria-label="Select a distance">
+        <option hidden>Select</option>
+        <option value="5">high</option>
+        <option value="10">medium </option>
+        <option value="15">low</option>
+      </select>
+
+    </div>
+
     <div class="card" id="Connect">
       <h3>Connect</h3>
       <p class="attention">please Connect</p>
       <button class="Reset" id="connectButton">Connect to KaStride</button>
     </div>
 
-    <div class="card" id="Setting">
-
-      <div class="minicard">
-        <h3>Color</h3>
-        <p class="attention">Number of Color</p>
-        <select id="colorDropdown" class="color-label" aria-label="Select a color" disabled>
-          <option hidden>select</option>
-          <option value="1">1</option>
-          <option value="2">1 &amp; 2</option>
-          <option value="3">1 &amp; 2 &amp; 3</option>
-        </select>
-      </div>
-
-      <div class="minicard">
-        <h3>Distance</h3>
-        <p class="attention">Sensor Sensitivity </p>
-        <select id="distanceRange" class="distance-label" aria-label="Select a distance" disabled>
-          <option hidden>Select</option>
-          <option value="5">high</option>
-          <option value="10">medium </option>
-          <option value="15">low</option>
-        </select>
-      </div>
-
-      <div class="minicard">
-        <h3>update</h3>
-        <p class="attention" style="color: red; font-size: .7rem;">don't disconnect during the update</p>
-        <button onclick="startOTAUpdate()" id="progress" class="Reset" disabled>Check and Update</button>
-      </div>
-
-    </div>
-
-
-
     <div class="card" id="counterDiv">
       <h3>Counter</h3>
       <p class="state"><span id="counterValue">-</span></p>
       <p class="count-increase" id="timer">00:00:00</p>
 
-      <button class="Reset" id="pauseResumeButton" onclick="pauseResumeTimer()" disabled>
+      <button class="Reset" id="pauseResumeButton" onclick="pauseResumeTimer()">
         Pause
       </button>
       <button class="Reset" id="resetButton" onclick="resetCounter()" disabled>Reset Counter</button>
@@ -205,11 +192,10 @@
       <input type="number" id="time" placeholder="Enter time" min="1" oninput="calculateSpeed()" />
       <br />
       <br />
-      <button onclick="toggleTimer()" class="buttom">Timer</button>
+      <button onclick="toggleTimer();" class="buttom">Timer</button>
       <br />
       <p class="result">Speed: <span id="speed">0</span> m/sec</p>
     </div>
-
   </div>
   <script src="index.js"></script>
 

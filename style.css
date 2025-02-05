@@ -45,7 +45,7 @@ select {
 }
 
 .content {
-  padding: 10px 0 10px 0;
+  padding: 10px;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -58,11 +58,6 @@ select {
   padding-bottom: 20px;
   border-radius: 10px;
   position: relative;
-}
-.minicard {
-  margin: 7px 0 7px 0;
-  padding: 5px 0 5px 0;
-  border-radius: 10px;
 }
 
 .card img {
@@ -93,8 +88,7 @@ label {
 #distance,
 h3,
 select,
-h4,
-#distanceLabel {
+h4 ,#distanceLabel{
   color: #143642;
 }
 
@@ -112,8 +106,7 @@ h4,
   font-size: 1.5rem;
 }
 
-#timer,
-#distanceLabel {
+#timer,#distanceLabel {
   font-size: 1rem;
 }
 
@@ -148,8 +141,7 @@ h3,
 #distance,
 .titlee,
 select,
-#historyDiv,
-#distanceLabel {
+#historyDiv ,#distanceLabel{
   font-weight: lighter;
   font-family: "ethnocentricregular";
 }
@@ -180,23 +172,19 @@ option {
 .buttom:hover {
   cursor: pointer;
 }
-
 #control .buttom.active {
-  background-color: #143642;
-  color: white;
+  background-color: #143642 ;
+  color: white ;
 }
-
 .Reset {
   border-radius: 8px;
   border-color: rgba(20, 54, 66, 0.8);
   padding: 8px;
   margin: 10px;
   color: #d43030d9;
-  cursor: pointer;
 }
 
-.color-label,
-.distance-label {
+.color-label ,.distance-label{
   display: inline-block;
   margin-bottom: 10px;
   padding: 10px;
@@ -205,11 +193,10 @@ option {
   width: 80%;
 }
 
-#control {
-  padding-top: 10px;
-  padding-bottom: 10px;
+#control{
+  padding-top:10px;
+  padding-bottom:10px;
 }
-
 .card#run,
 #counterDiv,
 #Setting,
@@ -236,7 +223,7 @@ option {
   border: 1px solid;
   border-radius: 10px;
   overflow: hidden;
-  font-size: 0.75em;
+  font-size: .75em;
 }
 
 #historyTable thead th {
@@ -260,13 +247,13 @@ option {
   border-radius: 4px;
   border-color: rgba(20, 54, 66, 0.8);
   color: #d43030d9;
-  font-size: 1.2em;
+  font-size: 1.2em
 }
 
 /* Media Query for smaller screens */
 @media (max-width: 360px) {
   #historyTable {
-    font-size: 0.59em;
+    font-size: .59em;
   }
 }
 
