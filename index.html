@@ -96,121 +96,129 @@
 
     <div class="content">
       <div class="Connected" id="Connected">
-        Connection status <span id="connectionStatus">waiting</span>
-        Connected Devices <span id="devicesValue">-</span>
+        <div class="parent">
+          <div class="status-box"><span id="connectionStatus">Waiting</span></div>
+          <div class="devices-box"><span id="devicesValue">0</span></div>
+
+          <div class="bpm-box"> <svg width="25" height="20" viewBox="0 0 120 110">
+              <path opacity="1" fill="#fe0133"
+                d="M60.83,17.18c8-8.35,13.62-15.57,26-17C110-2.46,131.27,21.26,119.57,44.61c-2.19,4.37-5.86,9.27-10.24,14.32v-.61h-30l-1.06,1.1L73.5,64.36l-9.88-19-3.28-6.3L57.2,45.46l-9,18.16L39.38,50.75l-3.12-4.52-7,11.4H11C4.74,49.1.38,39.89,0,29.94-.63,11.74,13.73.08,30.25.3c14.76.19,21,7.53,30.58,16.88Zm42.48,48.34L102,66.93c-8.23,8.52-17.34,16.87-23.72,23.2l-17.4,17.26L46.46,93.55c-8.76-8.44-20.32-18-29.71-28.72H33.19l1.06-1.72,2.32-3.76L45.8,72.74l3.47,5L52,72.29,60.48,55,69.37,72.1l2.3,4.43L75.14,73l7.2-7.42Z">
+              </path>
+            </svg><span id="bpmValue">0</span></div>
+
+          <div class="spo2-box">
+            <svg width="25" height="20" viewBox="0 0 120 100">
+              <path opacity="1" fill="#fe0133"
+                d="M122.88,91.36H88.73c0.39-3.37,1.58-6.54,3.57-9.51c1.98-2.98,5.7-6.48,11.16-10.53 c3.34-2.48,5.47-4.36,6.41-5.64c0.93-1.29,1.4-2.51,1.4-3.66c0-1.25-0.46-2.32-1.38-3.2c-0.93-0.89-2.09-1.33-3.49-1.33 c-1.45,0-2.64,0.46-3.56,1.37c-0.93,0.93-1.54,2.54-1.86,4.86L89.59,62.8c0.45-3.21,1.27-5.71,2.46-7.51 c1.19-1.8,2.87-3.18,5.03-4.14c2.17-0.96,5.18-1.44,9.01-1.44c4,0,7.11,0.46,9.34,1.37c2.22,0.9,3.97,2.31,5.24,4.2 c1.28,1.9,1.92,4.01,1.92,6.36c0,2.49-0.73,4.87-2.19,7.15c-1.46,2.27-4.12,4.77-7.98,7.48c-2.29,1.58-3.82,2.7-4.6,3.33 c-0.77,0.64-1.68,1.46-2.73,2.49h17.78V91.36L122.88,91.36z M0,41.18c0-12.98,3.61-23.1,10.86-30.32C18.1,3.61,28.17,0,41.1,0 c13.24,0,23.45,3.56,30.62,10.65c7.17,7.11,10.74,17.08,10.74,29.88c0,9.3-1.56,16.91-4.69,22.86 c-3.13,5.95-7.67,10.58-13.58,13.89c-5.93,3.32-13.3,4.96-22.14,4.96c-8.97,0-16.39-1.42-22.28-4.28 c-5.87-2.87-10.65-7.39-14.3-13.58C1.83,58.22,0,50.48,0,41.18L0,41.18z M24.56,41.23c0,8.02,1.5,13.8,4.48,17.3 c3,3.5,7.08,5.26,12.22,5.26c5.28,0,9.39-1.72,12.28-5.15c2.91-3.44,4.35-9.6,4.35-18.5c0-7.48-1.52-12.95-4.54-16.39 c-3.04-3.46-7.13-5.19-12.32-5.19c-4.96,0-8.96,1.76-11.97,5.26C26.06,27.32,24.56,33.14,24.56,41.23L24.56,41.23 z">
+              </path>
+            </svg>
+            <span id="spo2Value">0</span>
+          </div>
+        </div>
+
         <div id="control">
-          <button onclick="onlyshow('Connect')" class="buttom">
-            Connect
-          </button>
+          <button onclick="onlyshow('Connect')" class="buttom">Connect</button>
           <button onclick="onlyshow('Setting')" class="buttom">Setting</button>
-          <button onclick="onlyshow('counterDiv')" class="buttom">
-            Counter
-          </button>
+          <button onclick="onlyshow('counterDiv')" class="buttom">Counter</button>
           <button onclick="onlyshow('run')" class="buttom">Run</button>
         </div>
       </div>
-    </div>
 
-    <div class="card" id="Setting">
-      <h3>Color</h3>
-      <p class="attention">Number of Color</p>
-      <select id="colorDropdown" class="color-label" aria-label="Select a color">
-        <option hidden>select</option>
-        <option value="1">1</option>
-        <option value="2">1 &amp; 2</option>
-        <option value="3">1 &amp; 2 &amp; 3</option>
-      </select>
+      <div class="card" id="Setting">
+        <h3>Color</h3>
+        <p class="attention">Number of Color</p>
+        <select id="colorDropdown" class="color-label" aria-label="Select a color">
+          <option hidden>select</option>
+          <option value="1">red</option>
+          <option value="2">red | green</option>
+          <option value="3">red | green | blue</option>
+        </select>
 
-      <h3>Distance</h3>
-      <p class="attention">Distance for sensor</p>
-      <select id="distanceRange" class="distance-label" aria-label="Select a distance">
-        <option hidden>Select</option>
-        <option value="5">high</option>
-        <option value="10">medium </option>
-        <option value="15">low</option>
-      </select>
+        <h3>Distance</h3>
+        <p class="attention">Distance for sensor</p>
+        <select id="distanceRange" class="distance-label" aria-label="Select a distance">
+          <option hidden>Select</option>
+          <option value="5">high</option>
+          <option value="10">medium </option>
+          <option value="15">low</option>
+        </select>
 
-    </div>
+      </div>
 
-    <div class="card" id="Connect">
-      <h3>Connect</h3>
-      <p class="attention">please Connect</p>
-      <button class="Reset" id="connectButton">Connect to KaStride</button>
-    </div>
+      <div class="card" id="Connect">
+        <h3>Connect</h3>
+        <p class="attention">please Connect</p>
+        <button class="Reset" id="connectButton">Connect to KaStride</button>
+      </div>
 
-    <div class="card" id="counterDiv">
-      <h3>Counter</h3>
-      <p class="state"><span id="counterValue">-</span></p>
-      <p class="count-increase" id="timer">00:00:00</p>
+      <div class="card" id="counterDiv">
+        <h3>Counter</h3>
+        <p class="state"><span id="counterValue">-</span></p>
+        <p class="count-increase" id="timer">00:00:00</p>
 
-      <button class="Reset" id="pauseResumeButton" onclick="pauseResumeTimer()">
-        Pause
-      </button>
-      <button class="Reset" id="resetButton" onclick="resetCounter()" disabled>Reset Counter</button>
+        <button class="Reset" id="pauseResumeButton" onclick="pauseResumeTimer()">
+          Pause
+        </button>
+        <button class="Reset" id="resetButton" onclick="resetCounter()" disabled>Reset Counter</button>
 
-      <!-- History section -->
-      <div id="historyDiv">
-        <h4>History</h4>
-        <table id="historyTable">
-          <thead>
-            <tr>
-              <th>Remove</th>
-              <th onclick="sortTable(1)">
-                <div class="center-content">
-                  Counter
-                  <svg width="13" height="13" viewBox="0 0 13 18" fill="none">
-                    <path d="M8 0L2 6V7H14V6L8 0Z" opacity="1" fill="#143642" />
-                    <path d="M8 16L2 10V9H14V10L8 16Z" opacity="1" fill="#143642" />
-                  </svg>
-                </div>
-              </th>
+        <!-- History section -->
+        <div id="historyDiv">
+          <h4>History</h4>
+          <table id="historyTable">
+            <thead>
+              <tr>
+                <th>Remove</th>
+                <th onclick="sortTable(1)">
+                  <div class="center-content">
+                    Counter
+                    <svg width="13" height="13" viewBox="0 0 13 18" fill="none">
+                      <path d="M8 0L2 6V7H14V6L8 0Z" opacity="1" fill="#143642" />
+                      <path d="M8 16L2 10V9H14V10L8 16Z" opacity="1" fill="#143642" />
+                    </svg>
+                  </div>
+                </th>
 
-              <th onclick="sortTable(2)">
-                <div class="center-content">
-                  Time
-                  <svg width="13" height="13" viewBox="0 0 13 18" fill="none">
-                    <path d="M8 0L2 6V7H14V6L8 0Z" opacity="1" fill="#143642" />
-                    <path d="M8 16L2 10V9H14V10L8 16Z" opacity="1" fill="#143642" />
-                  </svg>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Rows will be added here dynamically -->
-          </tbody>
-        </table>
+                <th onclick="sortTable(2)">
+                  <div class="center-content">
+                    Time
+                    <svg width="13" height="13" viewBox="0 0 13 18" fill="none">
+                      <path d="M8 0L2 6V7H14V6L8 0Z" opacity="1" fill="#143642" />
+                      <path d="M8 16L2 10V9H14V10L8 16Z" opacity="1" fill="#143642" />
+                    </svg>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows will be added here dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card" id="run">
+        <h3>Run</h3>
+        <label class="titlee" for="distance">Distance (m): </label>
+        <input type="number" id="distance" placeholder="Enter distance" min="1" oninput="calculateSpeed()" />
+        <br />
+        <label class="titlee" for="time">Time (s): </label>
+        <input type="number" id="time" placeholder="Enter time" min="1" oninput="calculateSpeed()" />
+        <br />
+        <br />
+        <button onclick="toggleTimer();" class="buttom">Timer</button>
+        <br />
+        <p class="result">Speed: <span id="speed">0</span> m/sec</p>
       </div>
     </div>
+    <script src="index.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PHE9E6S4Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-    <div class="card" id="run">
-      <h3>Run</h3>
-      <label class="titlee" for="distance">Distance (m): </label>
-      <input type="number" id="distance" placeholder="Enter distance" min="1" oninput="calculateSpeed()" />
-      <br />
-      <label class="titlee" for="time">Time (s): </label>
-      <input type="number" id="time" placeholder="Enter time" min="1" oninput="calculateSpeed()" />
-      <br />
-      <br />
-      <button onclick="toggleTimer();" class="buttom">Timer</button>
-      <br />
-      <p class="result">Speed: <span id="speed">0</span> m/sec</p>
-    </div>
-  </div>
-  <script src="index.js"></script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PHE9E6S4Y"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-2PHE9E6S4Y');
-  </script>
-  <script>
-
-  </script>
+      gtag('config', 'G-2PHE9E6S4Y');
+    </script>
 </body>
 
 </html>
