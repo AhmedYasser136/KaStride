@@ -91,8 +91,8 @@ h3,
 select,
 h4,
 #distanceLabel,
-#spo2Value,
-#bpmValue {
+#spo2,
+#bpm {
   color: #143642;
 }
 
@@ -105,7 +105,7 @@ h4,
 .status-box {
   grid-column-start: 1;
   grid-row-start: 1;
-  background: #c2d3da;
+  background: #e0e8eb;
   border-radius: 8px;
   padding: 8px;
   text-align: center;
@@ -114,7 +114,7 @@ h4,
 .devices-box {
   grid-column-start: 2;
   grid-row-start: 1;
-  background: #c2d3da;
+  background: #e0e8eb;
   border-radius: 8px;
   padding: 8px;
   text-align: center;
@@ -124,8 +124,8 @@ h4,
   display: flex;
   align-items: center; /* توسيط العناصر عموديًا */
   justify-content: center; /* توسيط العناصر أفقيًا */
-  gap: 8px; /* مسافة بين الرمز والقيمة */
-  background: #c2d3da;
+  gap: 10px; /* مسافة بين الرمز والقيمة */
+  background: #e0e8eb;
   border-radius: 8px;
   padding: 8px;
 }
